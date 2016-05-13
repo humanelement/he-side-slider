@@ -1,3 +1,19 @@
-.padding-class .lb_content .lb {
-  padding: 30px;
+/* line 2, ../scss/example_styles.scss */
+.example1 .slider-boundary, .example1 {
+  width: 600px;
+}
+/* line 3, ../scss/example_styles.scss */
+.example1[data-slide-mode="slide"] .he_slider .he_view .he_item {
+  width: 33.3333% !important;
+  padding: 0 2px;
+}
+
+/* line 7, ../scss/example_styles.scss */
+.example2 .slider-boundary {
+  height: 600px;
+}
+/* line 8, ../scss/example_styles.scss */
+.example2[data-slide-mode="slide"] .he_slider .he_view .he_item {
+  height: 33.3333% !important;
+  padding: 2px 0;
 }

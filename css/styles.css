@@ -1,143 +1,275 @@
-/*
- * USAGE EXAMPLES:
- *
- * @include transition(width .2s linear);
- * @include transition(color .2s linear, background-color .3s linear);
- * @include transition(color .2s linear, background-color .3s linear, width .5s linear);
- * etc...
- *
- * */
-.he_lightbox_wrap {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s linear, background-color 0.3s linear;
-  -moz-transition: opacity 0.3s linear, background-color 0.3s linear;
-  -ms-transition: opacity 0.3s linear, background-color 0.3s linear;
-  -o-transition: opacity 0.3s linear, background-color 0.3s linear;
-  transition: opacity 0.3s linear, background-color 0.3s linear;
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.3);
+/* line 4, ../scss/_plugin-sample-styles.scss */
+.init_he_slider {
+  position: relative;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
 }
-.he_lightbox_wrap .he_lightbox_body {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  width: 80%;
-  max-width: 945px;
-  height: 55%;
-  max-height: 600px;
-  -webkit-transition: width 0.2s linear, height 0.2s linear;
-  -moz-transition: width 0.2s linear, height 0.2s linear;
-  -ms-transition: width 0.2s linear, height 0.2s linear;
-  -o-transition: width 0.2s linear, height 0.2s linear;
-  transition: width 0.2s linear, height 0.2s linear;
-}
-.he_lightbox_wrap .he_lightbox_body .lb_content {
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-}
-.he_lightbox_wrap .he_lightbox_body .lb_content .lb {
+/* line 7, ../scss/_plugin-sample-styles.scss */
+.init_he_slider .slider-boundary, .init_he_slider.slider-boundary {
+  display: block;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  display: none;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-.he_lightbox_wrap .he_lightbox_body .lb_content .lb iframe {
-  width: 100%;
-  height: 100%;
+/* line 10, ../scss/_plugin-sample-styles.scss */
+.init_he_slider .slider-boundary *, .init_he_slider.slider-boundary * {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
 }
-.he_lightbox_wrap .he_lightbox_body .lb_content .lb.loading {
-  display: block;
-  box-shadow: none;
-  background-image: url(../images/loading.gif);
-}
-.he_lightbox_wrap .he_lightbox_body .lb_content .lb.loading iframe {
-  display: none;
-}
-.he_lightbox_wrap .he_lightbox_body .lb_content .lb.loading img {
-  display: none;
-}
-.he_lightbox_wrap .he_lightbox_body .lb_content .lb.open {
-  display: block;
-}
-.he_lightbox_wrap .he_lightbox_body .lb_btns {
-  position: absolute;
-  right: 0;
-  top: -30px;
-  height: 30px;
-  width: 100%;
-}
-.he_lightbox_wrap .he_lightbox_body .lb_btns .lbbtn_close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 30px;
-  line-height: 30px;
-  font-size: 25px;
+/* line 15, ../scss/_plugin-sample-styles.scss */
+.init_he_slider .he_prev,
+.init_he_slider .he_next {
   cursor: pointer;
-  font-family: Consolas, monaco, monospace, 'Courier New', Courier, 'Lucida Sans Typewriter', monospace, sans-serif;
 }
-.he_lightbox_wrap .he_lightbox_body .lb_btns .lbbtn_close:after {
-  content: "X";
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
-  color: #fff;
+/* line 18, ../scss/_plugin-sample-styles.scss */
+.init_he_slider img {
+  max-width: 100%;
+}
+/* line 19, ../scss/_plugin-sample-styles.scss */
+.init_he_slider a {
+  display: block;
+}
+
+/* line 23, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .slider-boundary, .init_he_slider[data-slide-mode="slide"].slider-boundary,
+.init_he_slider[data-slide-mode="slide-vertical"] .slider-boundary,
+.init_he_slider[data-slide-mode="slide-vertical"].slider-boundary {
+  overflow: hidden;
+}
+/* line 24, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_slider,
+.init_he_slider[data-slide-mode="slide-vertical"] .he_slider {
+  position: relative;
+}
+/* line 27, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_prev,
+.init_he_slider[data-slide-mode="slide"] .he_next,
+.init_he_slider[data-slide-mode="slide-vertical"] .he_prev,
+.init_he_slider[data-slide-mode="slide-vertical"] .he_next {
+  position: absolute;
+  display: block;
+  margin: auto;
+}
+/* line 31, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_prev:before,
+.init_he_slider[data-slide-mode="slide"] .he_next:before,
+.init_he_slider[data-slide-mode="slide-vertical"] .he_prev:before,
+.init_he_slider[data-slide-mode="slide-vertical"] .he_next:before {
+  content: "";
+  display: block;
   position: absolute;
   left: 0;
-  right: 0;
   top: 0;
+  right: 0;
   bottom: 0;
   margin: auto;
-  text-align: center;
-  line-height: inherit;
+}
+
+/* line 34, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+/* line 37, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .slider-boundary, .init_he_slider[data-slide-mode="slide"].slider-boundary {
+  height: 167px;
+}
+/* line 38, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_slider {
+  font-size: 0;
+  white-space: nowrap;
+}
+/* line 39, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_view {
   font-size: inherit;
-  font-family: inherit;
+  display: inline-block;
+  width: 100%;
+}
+/* line 40, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 41, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_prev,
+.init_he_slider[data-slide-mode="slide"] .he_next {
+  bottom: 0;
+  height: 167px;
+  width: 50px;
+}
+/* line 45, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_prev:before,
+.init_he_slider[data-slide-mode="slide"] .he_next:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #ccc;
+}
+/* line 49, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_prev:hover:before,
+.init_he_slider[data-slide-mode="slide"] .he_next:hover:before {
+  border-color: blue;
+}
+/* line 51, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"].at_first_slide .he_prev:hover:before, .init_he_slider[data-slide-mode="slide"].at_last_slide .he_next:hover:before {
+  border-color: #ccc;
+}
+/* line 55, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_prev {
+  left: 0;
+}
+/* line 57, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_prev:before, .init_he_slider[data-slide-mode="slide"] .he_prev:hover .init_he_slider[data-slide-mode="slide"] .he_prev:before {
+  border-width: 83.5px 40px 83.5px 0;
+  border-top-color: transparent !important;
+  border-left-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+/* line 64, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_next {
+  right: 0;
+}
+/* line 66, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_next:before, .init_he_slider[data-slide-mode="slide"] .he_next:hover .init_he_slider[data-slide-mode="slide"] .he_next:before {
+  border-width: 83.5px 0 83.5px 40px;
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+/* line 74, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(1) {
+  width: 100%;
+}
+/* line 75, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(2),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(2) ~ .he_item {
+  width: 50%;
+}
+/* line 77, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(3),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(3) ~ .he_item {
+  width: 33.3333%;
+}
+/* line 79, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(4),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(4) ~ .he_item {
+  width: 25%;
+}
+/* line 81, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(5),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(5) ~ .he_item {
+  width: 20%;
+}
+/* line 83, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(6),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(6) ~ .he_item {
+  width: 16.6666%;
+}
+/* line 85, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(7),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(7) ~ .he_item {
+  width: 14.2857%;
+}
+/* line 87, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(8),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(8) ~ .he_item {
+  width: 12.5%;
+}
+/* line 89, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(9),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(9) ~ .he_item {
+  width: 11.1111%;
+}
+/* line 91, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(10),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(10) ~ .he_item {
+  width: 10%;
+}
+/* line 93, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(11),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(11) ~ .he_item {
+  width: 9.0909%;
+}
+/* line 95, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(12),
+.init_he_slider[data-slide-mode="slide"] .he_item:first-child:nth-last-child(12) ~ .he_item {
+  width: 8.3333%;
 }
 
-.he_lightbox_wrap.loading {
+/* line 99, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .slider-boundary, .init_he_slider[data-slide-mode="slide-vertical"].slider-boundary {
+  width: 167px;
+}
+/* line 101, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_view {
   display: block;
-  opacity: .6;
-  background-color: rgba(255, 255, 255, 0.5);
 }
-.he_lightbox_wrap.loading .lb_btns {
-  display: none;
-}
-.he_lightbox_wrap.loading .he_lightbox_body .lb_content {
-  background-color: transparent;
-}
-
-.he_lightbox_wrap.open {
+/* line 102, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item {
   display: block;
 }
+/* line 106, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(1) {
+  height: 100%;
+}
+/* line 107, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(2),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(2) ~ .he_item {
+  height: 50%;
+}
+/* line 109, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(3),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(3) ~ .he_item {
+  height: 33.3333%;
+}
+/* line 111, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(4),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(4) ~ .he_item {
+  height: 25%;
+}
+/* line 113, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(5),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(5) ~ .he_item {
+  height: 20%;
+}
+/* line 115, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(6),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(6) ~ .he_item {
+  height: 16.6666%;
+}
+/* line 117, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(7),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(7) ~ .he_item {
+  height: 14.2857%;
+}
+/* line 119, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(8),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(8) ~ .he_item {
+  height: 12.5%;
+}
+/* line 121, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(9),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(9) ~ .he_item {
+  height: 11.1111%;
+}
+/* line 123, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(10),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(10) ~ .he_item {
+  height: 10%;
+}
+/* line 125, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(11),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(11) ~ .he_item {
+  height: 9.0909%;
+}
+/* line 127, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(12),
+.init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(12) ~ .he_item {
+  height: 8.3333%;
+}
 
-@media screen and (max-width: 770px) {
-  .he_lightbox_wrap .he_lightbox_body {
-    width: 100%;
-    height: 70%;
-  }
+/* line 139, ../scss/_plugin-sample-styles.scss */
+.init_he_slider.at_first_slide .he_prev,
+.init_he_slider.at_last_slide .he_next {
+  opacity: .4;
 }

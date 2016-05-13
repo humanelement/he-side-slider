@@ -16,53 +16,107 @@
 
 <h2>Example 1</h2>
 
+<!-- start example 1 -->
 <div class="example1">
   <h3>Kitty Carousel</h3>
-  <div class="track">
-    <div class="screen">
-      <div class="kitty">
-        <a href="#"><img src="images/img1.jpg" alt="img 1" /></a>
+  <div class="wrap">
+    <div class="track">
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img1.jpg" alt="img 1" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img2.jpg" alt="img 2" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img3.jpg" alt="img 3" /></a>
+        </div>
       </div>
-      <div class="kitty">
-        <a href="#"><img src="images/img2.jpg" alt="img 2" /></a>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img4.jpg" alt="img 4" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img5.jpg" alt="img 5" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img6.jpg" alt="img 6" /></a>
+        </div>
       </div>
-      <div class="kitty">
-        <a href="#"><img src="images/img3.jpg" alt="img 3" /></a>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img7.jpg" alt="img 7" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img8.jpg" alt="img 8" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img9.jpg" alt="img 9" /></a>
+        </div>
       </div>
-    </div>
-    <div class="screen">
-      <div class="kitty">
-        <a href="#"><img src="images/img4.jpg" alt="img 4" /></a>
-      </div>
-      <div class="kitty">
-        <a href="#"><img src="images/img5.jpg" alt="img 5" /></a>
-      </div>
-      <div class="kitty">
-        <a href="#"><img src="images/img6.jpg" alt="img 6" /></a>
-      </div>
-    </div>
-    <div class="screen">
-      <div class="kitty">
-        <a href="#"><img src="images/img7.jpg" alt="img 7" /></a>
-      </div>
-      <div class="kitty">
-        <a href="#"><img src="images/img8.jpg" alt="img 8" /></a>
-      </div>
-      <div class="kitty">
-        <a href="#"><img src="images/img9.jpg" alt="img 9" /></a>
-      </div>
-    </div>
-    <div class="screen">
-      <div class="kitty">
-        <a href="#"><img src="images/img10.jpg" alt="img 10" /></a>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img10.jpg" alt="img 10" /></a>
+        </div>
       </div>
     </div>
   </div>
   <div class="move-left"></div>
   <div class="move-right"></div>
 </div>
+<!-- end example 1 -->
 
 <h2>Example 2</h2>
+
+<!-- start example 2 -->
+<div class="example2">
+  <h3>Meowy Mover</h3>
+  <div class="move-up"></div>
+  <div class="wrap">
+    <div class="track">
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img1.jpg" alt="img 1" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img2.jpg" alt="img 2" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img3.jpg" alt="img 3" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img4.jpg" alt="img 4" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img5.jpg" alt="img 5" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img6.jpg" alt="img 6" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img7.jpg" alt="img 7" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img8.jpg" alt="img 8" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img9.jpg" alt="img 9" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img10.jpg" alt="img 10" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="move-down"></div>
+</div>
+<!-- end example 2 -->
 
 <h2>Example 3</h2>
 
@@ -77,14 +131,33 @@ A "view" element holds one or more items. A slider only shows one "view" at a ti
 "View" element(s) should be children of the "slider" element.</p>
 <p><strong>next_btn</strong> (<u>optional</u>, string-selector). jQuery selector to designate which HTML element is the "next" button.</p>
 <p><strong>prev_btn</strong> (<u>optional</u>, string-selector). jQuery selector to designate which HTML element is the "previous" button.</p>
+<p><strong>items_per_view</strong> (<u>optional</u>, integer). Specifies how many items appear in each view. If not specified, then only 1 item will show per view, by default.</p>
 
 <h2>Code for these examples</h2>
 
 <script type="text/javascript">
   jQuery(document).ready(function(){
 
+    //example 1
+    heSideSlider.init({
+      wrap:'.example1:first',
+      slider:'.track:first',
+      view:'.screen',
+      prev_btn:'.move-left:first',
+      next_btn:'.move-right:first',
+      items_per_view:3
+    });
 
-
+    //example 2
+    heSideSlider.init({
+      wrap:'.example2:first',
+      slider:'.track:first',
+      view:'.screen',
+      prev_btn:'.move-up:first',
+      next_btn:'.move-down:first',
+      items_per_view:3,
+      slide_mode:'slide-vertical'
+    });
 
   });
 </script>

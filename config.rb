@@ -7,7 +7,7 @@ css_dir = "css"
 sass_dir = "scss"
 images_dir = "img"
 javascripts_dir = "js"
-line_comments = false
+line_comments = true
 # output_style = :compressed;
 
 # You can select your preferred output style here (can be overridden via the command line):
