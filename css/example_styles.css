@@ -1,6 +1,6 @@
-/* line 2, ../scss/example_styles.scss */
-.example1 .slider-boundary, .example1 {
-  width: 600px;
+/* line 1, ../scss/example_styles.scss */
+.example1 {
+  width: 700px;
 }
 /* line 3, ../scss/example_styles.scss */
 .example1[data-slide-mode="slide"] .he_slider .he_view .he_item {
@@ -8,12 +8,16 @@
   padding: 0 2px;
 }
 
-/* line 7, ../scss/example_styles.scss */
-.example2 .slider-boundary {
-  height: 600px;
+/* line 6, ../scss/example_styles.scss */
+.example2 {
+  width: 146px;
 }
-/* line 8, ../scss/example_styles.scss */
-.example2[data-slide-mode="slide"] .he_slider .he_view .he_item {
+/* line 9, ../scss/example_styles.scss */
+.example2 .slider-boundary {
+  height: 450px;
+}
+/* line 10, ../scss/example_styles.scss */
+.example2[data-slide-mode="slide-vertical"] .he_slider .he_view .he_item {
   height: 33.3333% !important;
   padding: 2px 0;
 }
