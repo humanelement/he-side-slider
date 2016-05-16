@@ -121,6 +121,67 @@
 
 <h2>Example 3</h2>
 
+<!-- start example 3 -->
+<h3>Feline Fader</h3>
+<p>{<strong>slide_mode:</strong><em>'fade'</em>, <strong>slide_mode:</strong><em>'fade'</em>}</p>
+<div class="example3">
+  <div class="wrap">
+    <div class="track">
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img1.jpg" alt="img 1" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img2.jpg" alt="img 2" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img3.jpg" alt="img 3" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img4.jpg" alt="img 4" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img5.jpg" alt="img 5" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img6.jpg" alt="img 6" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img7.jpg" alt="img 7" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img8.jpg" alt="img 8" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img9.jpg" alt="img 9" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img10.jpg" alt="img 10" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end example 3 -->
+
 <h2>Example 4</h2>
 
 <h2>Arguments</h2>
@@ -159,6 +220,20 @@ A "view" element holds one or more items. A slider only shows one "view" at a ti
       items_per_view:3,
       slide_mode:'slide-vertical'
     });
+
+    //example 3
+    heSideSlider.init({
+      wrap:'.example3:first',
+      slider:'.track:first',
+      view:'.screen',
+      items_per_view:1,
+      slide_mode:'fade',
+      time_between_autoslide:1000,
+      transition_speed:750,
+      circular_next_prev:true,
+      swipe_slide:false
+    });
+
 
   });
 </script>
