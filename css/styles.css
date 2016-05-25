@@ -252,73 +252,117 @@
   border-left-color: transparent !important;
   border-right-color: transparent !important;
 }
-/* line 145, ../scss/_plugin-sample-styles.scss */
+/* line 137, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] img {
   max-height: 100%;
   max-width: 300%;
   height: 100%;
 }
-/* line 147, ../scss/_plugin-sample-styles.scss */
+/* line 139, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(1) {
   height: 100%;
 }
-/* line 148, ../scss/_plugin-sample-styles.scss */
+/* line 140, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(2),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(2) ~ .he_item {
   height: 50%;
 }
-/* line 150, ../scss/_plugin-sample-styles.scss */
+/* line 142, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(3),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(3) ~ .he_item {
   height: 33.3333%;
 }
-/* line 152, ../scss/_plugin-sample-styles.scss */
+/* line 144, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(4),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(4) ~ .he_item {
   height: 25%;
 }
-/* line 154, ../scss/_plugin-sample-styles.scss */
+/* line 146, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(5),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(5) ~ .he_item {
   height: 20%;
 }
-/* line 156, ../scss/_plugin-sample-styles.scss */
+/* line 148, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(6),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(6) ~ .he_item {
   height: 16.6666%;
 }
-/* line 158, ../scss/_plugin-sample-styles.scss */
+/* line 150, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(7),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(7) ~ .he_item {
   height: 14.2857%;
 }
-/* line 160, ../scss/_plugin-sample-styles.scss */
+/* line 152, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(8),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(8) ~ .he_item {
   height: 12.5%;
 }
-/* line 162, ../scss/_plugin-sample-styles.scss */
+/* line 154, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(9),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(9) ~ .he_item {
   height: 11.1111%;
 }
-/* line 164, ../scss/_plugin-sample-styles.scss */
+/* line 156, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(10),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(10) ~ .he_item {
   height: 10%;
 }
-/* line 166, ../scss/_plugin-sample-styles.scss */
+/* line 158, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(11),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(11) ~ .he_item {
   height: 9.0909%;
 }
-/* line 168, ../scss/_plugin-sample-styles.scss */
+/* line 160, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(12),
 .init_he_slider[data-slide-mode="slide-vertical"] .he_item:first-child:nth-last-child(12) ~ .he_item {
   height: 8.3333%;
 }
 
-/* line 180, ../scss/_plugin-sample-styles.scss */
+/* line 163, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] {
+  display: inline-block;
+}
+/* line 166, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .slider-boundary, .init_he_slider[data-slide-mode="fade"].slider-boundary {
+  display: inline-block;
+}
+/* line 167, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .he_slider {
+  position: relative;
+  display: inline-block;
+}
+/* line 168, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .he_view {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: none;
+}
+/* line 169, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .he_item {
+  display: inline-block;
+}
+/* line 172, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .he_item a {
+  display: inline-block;
+}
+/* line 177, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .he_view.active, .init_he_slider[data-slide-mode="fade"] .he_view.fading-out {
+  display: inline-block;
+}
+/* line 178, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .he_view.fading-in {
+  z-index: 20;
+}
+/* line 179, ../scss/_plugin-sample-styles.scss */
+.init_he_slider[data-slide-mode="fade"] .he_view.fading-out {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 182, ../scss/_plugin-sample-styles.scss */
 .init_he_slider.at_first_slide .he_prev,
 .init_he_slider.at_last_slide .he_next {
   opacity: .4;
