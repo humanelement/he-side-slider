@@ -21,3 +21,40 @@
   height: 33.3333% !important;
   padding: 2px 0;
 }
+
+/* line 13, ../scss/example_styles.scss */
+.example4 {
+  width: 700px;
+}
+/* line 16, ../scss/example_styles.scss */
+.example4[data-slide-mode="slide"] .he_view {
+  white-space: normal;
+}
+/* line 18, ../scss/example_styles.scss */
+.example4[data-slide-mode="slide"] .he_slider .he_view .he_item {
+  width: 50% !important;
+  padding: 2px;
+}
+
+/* line 23, ../scss/example_styles.scss */
+.example5[data-slide-mode="slide"] {
+  width: 850px;
+}
+/* line 26, ../scss/example_styles.scss */
+.example5[data-slide-mode="slide"] .he_slider .he_view .he_item {
+  width: 25% !important;
+  padding: 0 2px;
+}
+/* line 28, ../scss/example_styles.scss */
+.example5[data-slide-mode="slide-vertical"] {
+  width: 146px;
+}
+/* line 31, ../scss/example_styles.scss */
+.example5[data-slide-mode="slide-vertical"] .slider-boundary {
+  height: 450px;
+}
+/* line 33, ../scss/example_styles.scss */
+.example5[data-slide-mode="slide-vertical"] .he_slider .he_view .he_item {
+  height: 33.3333% !important;
+  padding: 2px 0;
+}

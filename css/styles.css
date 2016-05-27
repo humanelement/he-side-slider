@@ -85,6 +85,7 @@
   font-size: inherit;
   display: inline-block;
   width: 100%;
+  vertical-align: top;
 }
 /* line 40, ../scss/_plugin-sample-styles.scss */
 .init_he_slider[data-slide-mode="slide"] .he_item {

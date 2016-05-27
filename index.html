@@ -184,6 +184,104 @@
 
 <h2>Example 4</h2>
 
+<!-- start example 4 -->
+<h3>Two Row Tabby</h3>
+<div class="example4">
+  <div class="wrap">
+    <div class="track">
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img1.jpg" alt="img 1" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img2.jpg" alt="img 2" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img3.jpg" alt="img 3" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img4.jpg" alt="img 4" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img5.jpg" alt="img 5" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img6.jpg" alt="img 6" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img7.jpg" alt="img 7" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img8.jpg" alt="img 8" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img9.jpg" alt="img 9" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img10.jpg" alt="img 10" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="move-left"></div>
+  <div class="move-right"></div>
+</div>
+<!-- end example 4 -->
+
+<h2>Example 5</h2>
+
+<!-- start example 5 -->
+<h3>Sneaky Switcheroo</h3>
+<div class="example5">
+  <div class="move-left"></div>
+  <div class="wrap">
+    <div class="track">
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img1.jpg" alt="img 1" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img2.jpg" alt="img 2" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img3.jpg" alt="img 3" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img4.jpg" alt="img 4" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img5.jpg" alt="img 5" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img6.jpg" alt="img 6" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img7.jpg" alt="img 7" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img8.jpg" alt="img 8" /></a>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="kitty">
+          <a href="#"><img src="images/img9.jpg" alt="img 9" /></a>
+        </div>
+        <div class="kitty">
+          <a href="#"><img src="images/img10.jpg" alt="img 10" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="move-right"></div>
+</div>
+<!-- end example 5 -->
+
 <h2>Arguments</h2>
 <p><strong>wrap</strong> (<u>required</u>, string-selector). jQuery selector to designate which HTML element is "wrap" parent for all child elements related to the slider.</p>
 <p><strong>slider</strong> (<u>required</u>, string-selector). jQuery selector to designate which HTML element is the "slider" element for this particular slider. <br />
@@ -234,6 +332,31 @@ A "view" element holds one or more items. A slider only shows one "view" at a ti
       swipe_slide:false
     });
 
+    //example 4
+    heSideSlider.init({
+      wrap:'.example4:first',
+      slider:'.track:first',
+      view:'.screen',
+      prev_btn:'.move-left:first',
+      next_btn:'.move-right:first',
+      items_per_view:4
+    });
+
+    //example 5
+    heSideSlider.init({
+      wrap:'.example5:first',
+      slider:'.track:first',
+      view:'.screen',
+      prev_btn:'.move-left:first',
+      next_btn:'.move-right:first',
+      items_per_view:4,
+      at_or_below_widths:{
+        '800':{
+          items_per_view:3,
+          slide_mode:'slide-vertical'
+        }
+      }
+    });
 
   });
 </script>

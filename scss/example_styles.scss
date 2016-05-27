@@ -9,3 +9,27 @@
   .slider-boundary{height:450px;}
   &[data-slide-mode="slide-vertical"] .he_slider .he_view .he_item{height:33.3333% !important;padding:2px 0;}
 }
+
+.example4{
+  width:700px;
+
+  &[data-slide-mode="slide"] .he_view{white-space:normal;}
+
+  &[data-slide-mode="slide"] .he_slider .he_view .he_item{width:50% !important;padding:2px;}
+}
+
+.example5{
+
+  &[data-slide-mode="slide"]{
+    width:850px;
+
+     .he_slider .he_view .he_item{width:25% !important;padding:0 2px;}
+  }
+  &[data-slide-mode="slide-vertical"]{
+    width:146px;
+
+    .slider-boundary{height:450px;}
+
+    .he_slider .he_view .he_item{height:33.3333% !important;padding:2px 0;}
+  }
+}
