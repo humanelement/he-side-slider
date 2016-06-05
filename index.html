@@ -66,11 +66,35 @@
 </div>
 <!-- end example 1 -->
 
+<div class="code">
+  <span class="comment">/*JavasScript*/</span><br /><br />
+  <span class="object">jQuery</span>(document).<span class="method">ready</span>(function(){<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//example 1</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="object">heSideSlider</span>.<span class="method">init</span>({<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  wrap:<span class="string">'.example1:first'</span>, <span class="comment">//selector: define the html wrapper</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  slider:<span class="string">'.track:first'</span>, <span class="comment">//selector: define the html element, moving "track"</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  view:<span class="string">'.screen'</span>, <span class="comment">//selector: define the html element that contains one or more of the "items" as child element(s)</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  prev_btn:<span class="string">'.move-left:first'</span>, <span class="comment">//selector: define previous button html element</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  next_btn:<span class="string">'.move-right:first'</span>, <span class="comment">//selector: define next button html element</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  items_per_view:<span class="number">3</span> <span class="comment">//how many items should appear per view?</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+<br />
+  });
+</div>
+<div class="code">
+  <span class="comment">/*Custome SCSS*/</span><br /><br />
+.example1{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width:700px;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&amp;[data-slide-mode="slide"] .he_slider .he_view .he_item{width:33.3333% !important;padding:0 2px;}<br />
+}
+</div>
+
 <h2>Example 2</h2>
 
 <!-- start example 2 -->
 <h3>Meowy Mover</h3>
-<p>{<strong>slide_mode:</strong><em>'slide-vertical'</em>}</p>
+<p>Set <em>vertical</em>, instead of <em>horizontal</em>, orientation.</p>
 <div class="example2">
   <div class="move-up"></div>
   <div class="wrap">
@@ -119,11 +143,40 @@
 </div>
 <!-- end example 2 -->
 
+<div class="code">
+  <span class="comment">/*JavasScript*/</span><br /><br />
+  <span class="object">jQuery</span>(document).<span class="method">ready</span>(function(){<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//example 2</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="object">heSideSlider</span>.<span class="method">init</span>({<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  wrap:<span class="string">'.example2:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  slider:<span class="string">'.track:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  view:<span class="string">'.screen'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  prev_btn:<span class="string">'.move-up:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  next_btn:<span class="string">'.move-down:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  items_per_view:<span class="number">3</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  slide_mode:<span class="string">'slide-vertical'</span> <span class="comment">//vertical orientation</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+<br />
+  });
+</div>
+
+<div class="code">
+  <span class="comment">/*Custome SCSS*/</span><br /><br />
+
+  .example2{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width:146px;<br />
+  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;.slider-boundary{height:450px;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&amp;[data-slide-mode="slide-vertical"] .he_slider .he_view .he_item{height:33.3333% !important;padding:2px 0;}<br />
+  }
+</div>
+
 <h2>Example 3</h2>
 
 <!-- start example 3 -->
 <h3>Feline Fader</h3>
-<p>{<strong>slide_mode:</strong><em>'fade'</em>, <strong>slide_mode:</strong><em>'fade'</em>}</p>
+<p>Create a <em>fader</em>, instead of <em>slider</em>.</p>
 <div class="example3">
   <div class="wrap">
     <div class="track">
@@ -182,10 +235,31 @@
 </div>
 <!-- end example 3 -->
 
+<div class="code">
+  <span class="comment">/*JavasScript*/</span><br /><br />
+  <span class="object">jQuery</span>(document).<span class="method">ready</span>(function(){<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//example 3</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="object">heSideSlider</span>.<span class="method">init</span>({<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  wrap:<span class="string">'.example3:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  slider:<span class="string">'.track:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  view:<span class="string">'.screen'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  items_per_view:<span class="number">1</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  slide_mode:<span class="string">'fade'</span>, <span class="comment">//fade transition</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  time_between_autoslide:<span class="number">1000</span>, <span class="comment">//pause duration between slide transitions</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  transition_speed:<span class="number">750</span>, <span class="comment">//fade effect speed</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  circular_next_prev:<span class="object">true</span>, <span class="comment">//cycle back to the first slide after reaching the last slide</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;  swipe_slide:<span class="object">false</span> <span class="comment">//disable touch-screen ability to go to prev/next slide on swipe</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+<br />
+  });
+</div>
+
 <h2>Example 4</h2>
 
 <!-- start example 4 -->
 <h3>Two Row Tabby</h3>
+<p>Feel free to style the layout within a "view" so that the "items" inside the "view" can wrap to multiple rows.</p>
 <div class="example4">
   <div class="wrap">
     <div class="track">
@@ -232,10 +306,40 @@
 </div>
 <!-- end example 4 -->
 
+<div class="code">
+  <span class="comment">/*JavasScript*/</span><br /><br />
+  <span class="object">jQuery</span>(document).<span class="method">ready</span>(function(){<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//example 4</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="object">heSideSlider</span>.<span class="method">init</span>({<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  wrap:<span class="string">'.example4:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  slider:<span class="string">'.track:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  view:<span class="string">'.screen'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  prev_btn:<span class="string">'.move-left:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  next_btn:<span class="string">'.move-right:first'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  items_per_view:<span class="number">4</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+<br />
+  });
+</div>
+
+<div class="code">
+  <span class="comment">/*Custome SCSS*/</span><br /><br />
+
+  .example4{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;width:700px;<br />
+  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&amp;[data-slide-mode="slide"] .he_view{white-space:normal;}<br />
+  <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&amp;[data-slide-mode="slide"] .he_slider .he_view .he_item{width:50% !important;padding:2px;}<br />
+  }
+</div>
+
 <h2>Example 5</h2>
 
 <!-- start example 5 -->
 <h3>Sneaky Switcheroo</h3>
+<p><em>Horizontal</em> at wider window widths and <em>vertical</em> at thinner window widths...</p>
 <div class="example5">
   <div class="move-left"></div>
   <div class="wrap">
@@ -282,18 +386,48 @@
 </div>
 <!-- end example 5 -->
 
-<h2>Arguments</h2>
-<p><strong>wrap</strong> (<u>required</u>, string-selector). jQuery selector to designate which HTML element is "wrap" parent for all child elements related to the slider.</p>
-<p><strong>slider</strong> (<u>required</u>, string-selector). jQuery selector to designate which HTML element is the "slider" element for this particular slider. <br />
-The "slider" element is the <em>moving</em> element. The "slider" should be a parent element above the "view" element(s).</p>
-<p><strong>view</strong> (<u>required</u>, string-selector). jQuery selector to designate which HTML element(s) are "view" for this particular slider.<br />
-A "view" element holds one or more items. A slider only shows one "view" at a time. When sliding <em>next</em> or <em>previous</em>, a different "view" slides into visibility. <br />
-"View" element(s) should be children of the "slider" element.</p>
-<p><strong>next_btn</strong> (<u>optional</u>, string-selector). jQuery selector to designate which HTML element is the "next" button.</p>
-<p><strong>prev_btn</strong> (<u>optional</u>, string-selector). jQuery selector to designate which HTML element is the "previous" button.</p>
-<p><strong>items_per_view</strong> (<u>optional</u>, integer). Specifies how many items appear in each view. If not specified, then only 1 item will show per view, by default.</p>
+<div class="code">
+  <span class="comment">/*JavasScript*/</span><br /><br />
+  <span class="object">jQuery</span>(document).<span class="method">ready</span>(function(){<br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//example 4</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="object">heSideSlider</span>.<span class="method">init</span>({<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  wrap:<span class="string">'.example5:first'</span>,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  slider:<span class="string">'.track:first'</span>,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  view:<span class="string">'.screen'</span>,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  prev_btn:<span class="string">'.move-left:first'</span>,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  next_btn:<span class="string">'.move-right:first'</span>,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  items_per_view:<span class="number">4</span>,<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  at_or_below_widths:{ <span class="comment">//apply different settings, depending on window width</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">'800'</span>:{ <span class="comment">//at 800px window width...</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  items_per_view:<span class="number">3</span>, <span class="comment">//show 3 items per view</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  slide_mode:<span class="string">'slide-vertical'</span> <span class="comment">//vertical orientation</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;  }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
+<br />
+  });
+</div>
 
-<h2>Code for these examples</h2>
+<div class="code">
+  <span class="comment">/*Custome SCSS*/</span><br /><br />
+
+  .example5{<br />
+  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&amp;[data-slide-mode="slide"]{<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:850px;<br />
+  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .he_slider .he_view .he_item{width:25% !important;padding:0 2px;}<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&amp;[data-slide-mode="slide-vertical"]{<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:146px;<br />
+  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.slider-boundary{height:450px;}<br />
+  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.he_slider .he_view .he_item{height:33.3333% !important;padding:2px 0;}<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+  }
+</div>
 
 <script type="text/javascript">
   jQuery(document).ready(function(){
@@ -361,20 +495,7 @@ A "view" element holds one or more items. A slider only shows one "view" at a ti
   });
 </script>
 
-<div class="code">
-  &lt;<span class="object">script</span> <span class="number">type</span>=<span class="string">"text/javascript"</span>&gt;<br />
-    <span class="method">jQuery</span>(<span class="number">document</span>).<span class="method">ready</span>(function(){<br />
-  <br />
-
-
-
-
-
-
-  <br />
-    });<br />
-  &lt;/<span class="object">script</span>&gt;
-</div>
-
 </body>
 </html>
+
+<br /><div style="text-align:center;">- <em>fini</em> -</div><br />

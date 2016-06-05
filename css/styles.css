@@ -1,3 +1,37 @@
+/* line 1, ../scss/_code.scss */
+.code {
+  font-family: "Courier New", Monaco, "Lucida Sans Typewriter", sans-serif;
+  background-color: #282c34;
+  color: #abb2bf;
+  margin: 20px 0;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: auto;
+}
+/* line 4, ../scss/_code.scss */
+.code .object {
+  color: #e06a64;
+}
+/* line 5, ../scss/_code.scss */
+.code .comment {
+  color: #5c6370;
+  font-style: italic;
+}
+/* line 6, ../scss/_code.scss */
+.code .method {
+  color: #61afef;
+}
+/* line 7, ../scss/_code.scss */
+.code .number {
+  color: #dfb672;
+}
+/* line 8, ../scss/_code.scss */
+.code .string {
+  color: #98c379;
+}
+
 /* line 4, ../scss/_plugin-sample-styles.scss */
 .init_he_slider {
   position: relative;
